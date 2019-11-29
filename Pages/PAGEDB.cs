@@ -27,6 +27,49 @@ namespace Pages
                     + "; password = " + Password;
             }
         }
+        public Page FindPage(int id)
+        {
+            string query = "select * from pages where pageid = " + id;
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+
+            Page ResultPage = new Page();
+            try
+            {
+                Connect.Open();
+                //give the connection a query
+                MySqlCommand cmd = new MySqlCommand(query, Connect);
+                //grab the result set
+                MySqlDataReader resultset = cmd.ExecuteReader();
+                List<Page> pages = new List<Page>();
+
+                while (resultset.Read())
+                {
+                    Page Row = new Page();
+                    for (int i = 0; i < resultset.FieldCount; i++)
+                    {
+                        Row.SetPageTitle(resultset["pagetitle"].ToString());
+                        Row.SetPageContent(resultset["pagebody"].ToString());
+                        Row.SetPageId(Int32.Parse(resultset["pageid"].ToString()));
+                    }
+                    pages.Add(Row);
+
+                }
+                ResultPage = pages[0];
+
+            }
+            catch (Exception ex)
+            {
+                //If something (anything) goes wrong with the try{} block, this block will execute
+                Debug.WriteLine("Something went wrong in the find Student method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+            Debug.WriteLine("Database Connection Terminated.");
+
+            return ResultPage;
+
+        }
 
         public List<Page> List_Query(string query)
         {
@@ -51,8 +94,9 @@ namespace Pages
                     Page Row = new Page();
                     for (int i = 0; i < resultset.FieldCount; i++)
                     {
-                        Row.PageTitle = resultset["pagetitle"].ToString();
-                        Row.PageContent = resultset["pagebody"].ToString();
+                        Row.SetPageTitle(resultset["pagetitle"].ToString());
+                        Row.SetPageContent(resultset["pagebody"].ToString());
+                        Row.SetPageId(Int32.Parse(resultset["pageid"].ToString()));
 
                     }
                     ResultSet.Add(Row);

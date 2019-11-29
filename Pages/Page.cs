@@ -7,11 +7,35 @@ namespace Pages
 {
     public class Page
     {
-        private string pageTitle;
-        private string pageContent;
+        private string PageTitle;
+        private string PageContent;
+        private int PageId;
 
-        public string PageTitle { get; set; }
-        public string PageContent { get; set; }
+        public int GetPageId()
+        {
+            return PageId;
+        }
+        public void SetPageId(int value)
+        {
+            PageId = value;
+        }
+        public string GetPageTitle()
+        {
+            return PageTitle;
+        }
+        public void SetPageTitle(string value)
+        {
+            PageTitle = value;
+        }
+
+        public string GetPageContent()
+        {
+            return PageContent;
+        }
         
+        public void SetPageContent(string value)
+        {
+            PageContent = value;
+        }
     }
 }
