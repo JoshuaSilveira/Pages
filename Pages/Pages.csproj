@@ -143,6 +143,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ListPages.aspx" />
     <Content Include="ShowPage.aspx" />
+    <Content Include="NewPage.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,6 +188,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="PageController.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="PAGEDB.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -239,6 +241,13 @@
     </Compile>
     <Compile Include="ShowPage.aspx.designer.cs">
       <DependentUpon>ShowPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPage.aspx.cs">
+      <DependentUpon>NewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPage.aspx.designer.cs">
+      <DependentUpon>NewPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

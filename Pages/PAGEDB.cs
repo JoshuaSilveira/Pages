@@ -16,7 +16,7 @@ namespace Pages
         private static string Port { get { return "3306"; } }
 
         //ConnectionString is something that we use to connect to a database
-        private static string ConnectionString
+        protected static string ConnectionString
         {
             get
             {

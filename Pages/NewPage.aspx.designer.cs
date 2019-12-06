@@ -11,25 +11,25 @@ namespace Pages
 {
 
 
-    public partial class SiteMaster
+    public partial class WebForm3
     {
 
         /// <summary>
-        /// pages control.
+        /// page_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pages;
+        protected global::System.Web.UI.WebControls.TextBox page_title;
 
         /// <summary>
-        /// MainContent control.
+        /// page_content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox page_content;
     }
 }
