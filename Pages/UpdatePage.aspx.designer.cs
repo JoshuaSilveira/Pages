@@ -11,7 +11,7 @@ namespace Pages
 {
 
 
-    public partial class NewPage
+    public partial class WebForm3
     {
 
         /// <summary>

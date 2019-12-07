@@ -4,4 +4,7 @@
         <h1 id="title" runat="server"></h1>
         <p id="content" runat="server"></p>
     </div>
+    <asp:Button OnClick="updatePage" runat="server" Text="Update This page?" />
+
+    <asp:Button OnClick="deletePage" runat="server" Text="Delete This page?" />
 </asp:Content>

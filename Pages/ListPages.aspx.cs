@@ -18,7 +18,9 @@ namespace Pages
             foreach (Page row in testList)
             {
                 //System.Diagnostics.Debug.WriteLine(row.PageContent + " " + row.PageTitle);
-                pages.InnerHtml += "<a href=\"ShowPage.aspx?pageid=" + row.GetPageId() + "\">" + row.GetPageTitle() + "</a>";
+                pages.InnerHtml += "<a href=\"ShowPage.aspx?pageid=" + row.GetPageId() + "\">" + row.GetPageTitle() + "</a> ";
+              
+                pages.InnerHtml += "<br>";
             }
 
         }
