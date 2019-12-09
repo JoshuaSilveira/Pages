@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pages
-{
-
-
-    public partial class WebForm3
-    {
-
+namespace Pages {
+    
+    
+    public partial class WebForm3 {
+        
+        /// <summary>
+        /// page_title_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator page_title_validator;
+        
         /// <summary>
         /// page_title control.
         /// </summary>
@@ -22,7 +29,7 @@ namespace Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox page_title;
-
+        
         /// <summary>
         /// page_content control.
         /// </summary>
