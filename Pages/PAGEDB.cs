@@ -11,9 +11,9 @@ namespace Pages
     {
         private static string User { get { return "root"; } }
         private static string Password { get { return "root"; } }
-        private static string Database { get { return "pagedb"; } }
+        private static string Database { get { return "frf"; } }
         private static string Server { get { return "localhost"; } }
-        private static string Port { get { return "3306"; } }
+        private static string Port { get { return "3307"; } }
 
         //ConnectionString is something that we use to connect to a database
         protected static string ConnectionString
